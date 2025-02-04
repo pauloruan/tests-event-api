@@ -1,0 +1,7 @@
+.env
+node_modules
+coverage
+session.json
+yarn-error
+jest-results.json
+.yarn*
