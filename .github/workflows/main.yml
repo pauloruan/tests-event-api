@@ -26,4 +26,4 @@ jobs:
         uses: codecov/codecov-action@v4.0.1
         with:
           name: ${{ secrets.EVENT_API_COVERAGE_SECRET }}
-          slug: "pauloruan/event-api-test"
+          slug: "pauloruan/tests-event-api"
