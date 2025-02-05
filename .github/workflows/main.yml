@@ -26,5 +26,5 @@ jobs:
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          slug: "pauloruan/event-api-test"
-          # slug: "pauloruan/tests-event-api"
+          # slug: "pauloruan/event-api-test"
+          slug: "pauloruan/tests-event-api"
