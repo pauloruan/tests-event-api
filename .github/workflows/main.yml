@@ -20,10 +20,11 @@ jobs:
         with:
           node-version: 18
       - run: npm ci
-      - run: npm test
+      - run: npx jest --coverage
 
       - name: Upload Coverage Reports to Codecov
-        uses: codecov/codecov-action@v4.0.1
+        uses: codecov/codecov-action@v5
         with:
-          name: ${{ secrets.EVENT_API_COVERAGE_SECRET }}
-          slug: "pauloruan/tests-event-api"
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: "pauloruan/event-api-test"
+          # slug: "pauloruan/tests-event-api"
