@@ -21,17 +21,9 @@ jobs:
           node-version: 18
       - run: npm ci
       - run: npm test
-    # steps:
-    #   - name: Checkout Repository
-    #     uses: actions/checkout@v4
 
-    #   - name: NodeJS Setup
-    #     uses: actions/setup-node@v4
-    #     with:
-    #       node-version: "20.x"
-
-    #   - name: Installing Dependencies
-    #     uses: npm install
-
-    #   - name: Testing Running
-    #     uses: npm run test
+      - name: Upload Coverage Reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          name: ${{ secrets.EVENT_API_COVERAGE_SECRET }}
+          slug: "pauloruan/event-api-test"
